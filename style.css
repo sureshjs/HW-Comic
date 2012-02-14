@@ -1,0 +1,105 @@
+body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: url(background3.jpg);
+    background-repeat: no-repeat;
+
+}
+
+#container {
+    
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+
+    
+
+}
+
+#panel1 {
+    position: relative;
+    top: 5%;
+    left: 2%;
+    width: 45%;
+    height: 42%;
+    margin: 0;
+    background: url(comic1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+   -webkit-animation: fader 5s ease-in .5s 1 normal forwards;
+    
+}
+
+#panel2 {
+    position: absolute;
+    top: 32%;
+    left: 30%;
+    width: 40%;
+    height: 50%;
+    margin: 0;
+    background: url(comic2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+    -webkit-animation: resizer 5s ease-in 5s 1 normal both, movingbox2 5s ease-in 5s 1 normal both, fader3 1s ease-in 12s 1 normal forwards;
+}
+
+#panel3 {
+    position: absolute;
+    top: 43%;
+    left: 67%;
+    width: 30%;
+    height: 62%;
+    margin: 0;
+    background: url(comic3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+   -webkit-animation: movingbox 5s ease-in 15s 1 normal both, fader2 5s ease-in 15s 1 backwards;
+    
+}
+
+@-webkit-keyframes fader {
+    0% { opacity: 1; }
+    75% { opacity: 0.5; }
+    100% { opacity: 0; }
+}
+
+@-webkit-keyframes movingbox {
+    from{left:0%;-webkit-transform: rotate(0deg);}
+    to{left:65%;-webkit-transform: rotate(360deg);}
+}
+
+@-webkit-keyframes resizer{
+    0% { width: 0%; height: 0%; }
+    100% { width: 40%; height: 50%; }
+
+}
+
+@-webkit-keyframes movingbox2 {
+    from{left:100%;-webkit-transform: rotate(0deg);}
+    to{left:30%;-webkit-transform: rotate(360deg);}
+}
+
+@-webkit-keyframes fader2 {
+    100% { opacity: 1; }
+    0% { opacity: 0; }
+}
+
+@-webkit-keyframes fader3 {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
